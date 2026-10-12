@@ -1,0 +1,14 @@
+﻿@model List<PatikaWebApp.Models.Gyogyszer>
+
+<h2>Gyógyszerek</h2>
+
+@foreach (var Gyogyszer in Model)
+{
+    <div>
+        <h3>@Gyogyszer.Nev</h3>
+
+        <img src="~/imgs/@(Gyogyszer.Kepnev).jpg"
+             alt="@Gyogyszer.Nev"
+             height="200" />
+    </div>
+}

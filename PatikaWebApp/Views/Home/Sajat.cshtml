@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Gyógyszerek Adatai";
+}
+<h1>@ViewData["Title"]</h1>
+<p>@Model.ToString()</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Nev</td>
+            <td>Hatoanyag</td>
+            <td>Venykoteles</td>
+            <td>Kepnev</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gyogyszer in Model)
+        {
+            <tr>
+                <td><a asp-area="" asp-controller="Home" asp-action="Gyogyszer">@gyogyszer.Nev</a></td>
+                <td>@gyogyszer.Hatoanyag</td>
+                <td>@gyogyszer.Venykoteles</td>
+                <td>@gyogyszer.Kepnev</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
